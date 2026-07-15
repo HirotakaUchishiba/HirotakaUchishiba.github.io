@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install HTML validator
+        run: sudo apt-get update && sudo apt-get install --yes libxml2-utils
+      - name: Validate public pages
+        run: ./scripts/verify-site.sh
