@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MailWorker is a native macOS app for Gmail cleanup and Google Calendar management.">
+  <title>MailWorker</title>
+  <link rel="icon" href="assets/mailworker-oauth-logo.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="MailWorker home">
+      <img src="assets/mailworker-oauth-logo.png" width="40" height="40" alt="">
+      <span>MailWorker</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">Native macOS utility</p>
+        <h1>MailWorker</h1>
+        <p class="lede">A focused menu bar app that helps users organize Gmail, turn email into Google Calendar events, and review duplicate events before making changes.</p>
+        <p class="japanese">Gmailの受信箱整理、メールからの予定登録、重複予定の確認を行うmacOSメニューバーアプリです。</p>
+      </div>
+      <img class="product-mark" src="assets/mailworker-icon.png" width="512" height="512" alt="MailWorker envelope and calendar icon">
+    </section>
+
+    <section class="band" aria-labelledby="control-heading">
+      <div class="section-heading">
+        <p class="eyebrow">User control</p>
+        <h2 id="control-heading">Review before change</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Gmail cleanup</h3>
+          <p>Preview archive rules, move approved unwanted messages to Trash, send a standard unsubscribe request, or create a sender filter.</p>
+        </article>
+        <article>
+          <h3>Calendar registration</h3>
+          <p>Extract an event proposal from selected mail and create it only after approval, except for explicitly enabled trusted-sender automation.</p>
+        </article>
+        <article>
+          <h3>Duplicate review</h3>
+          <p>List possible duplicate events for a selected period, then update or delete only the pair the user approves.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="data-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Google user data</p>
+        <h2 id="data-heading">Used only for visible app features</h2>
+      </div>
+      <div class="data-list">
+        <div>
+          <strong>Gmail messages</strong>
+          <span>Read messages matching user-defined queries and apply only requested or approved mailbox actions.</span>
+        </div>
+        <div>
+          <strong>Gmail filters</strong>
+          <span>Create a filter only for a sender the user explicitly approves.</span>
+        </div>
+        <div>
+          <strong>Calendar events</strong>
+          <span>List, create, update, or delete events for registration and duplicate cleanup workflows.</span>
+        </div>
+      </div>
+      <p class="policy-callout">OAuth tokens are stored in macOS Keychain. App state remains on the user's Mac. MailWorker has no developer-operated data server. Full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>MailWorker by Hirotaka Uchishiba</span>
+    <span><a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a></span>
+  </footer>
+</body>
+</html>
