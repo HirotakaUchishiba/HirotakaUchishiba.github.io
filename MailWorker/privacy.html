@@ -47,7 +47,7 @@
 
     <section>
       <h2>3. Local storage and retention</h2>
-      <p>Google OAuth access and refresh tokens are stored in the user's macOS Keychain. Claude subscription authentication remains under Claude Code's control and is not copied into MailWorker. Preferences, Trash observation times, calendar approval queues, message-to-event mappings, and audit records are stored only in MailWorker's sandboxed Application Support directory on the user's Mac.</p>
+      <p>The Google OAuth Desktop client secret, access token, and refresh token are stored in the user's macOS Keychain. The client secret is provisioned locally and is not included in the app bundle. Claude subscription authentication remains under Claude Code's control and is not copied into MailWorker. Preferences, Trash observation times, calendar approval queues, message-to-event mappings, and audit records are stored only in MailWorker's sandboxed Application Support directory on the user's Mac.</p>
       <p>Local app data remains until the user removes it or removes the app's data. OAuth tokens remain until the user disconnects Google in MailWorker, revokes access in the Google Account settings, or removes the related Keychain items. MailWorker does not operate a developer server that stores Google user data.</p>
     </section>
 
@@ -80,7 +80,7 @@
 
     <section lang="ja" class="japanese-summary">
       <h2>日本語要約</h2>
-      <p>MailWorkerは、利用者が許可したGmailとGoogle Calendarのデータを、受信箱整理、不要メール処理、予定登録、重複予定整理のために利用します。条件に一致するメール操作は個別承認なしで実行し、ごみ箱に最低24時間継続して存在したメールは次回処理時に復元不能な完全削除を行います。OAuthトークンはmacOS Keychain、設定・ごみ箱確認時刻・カレンダー承認待ち・監査記録は利用者のMac内に保存し、開発者運営サーバーには保存しません。LLM機能を実行した場合に限り、必要最小限のメール項目をMac内の一時キュー経由で、利用者のClaudeサブスクリプションを使用する公式Claude Code CLIへ送信します。</p>
+      <p>MailWorkerは、利用者が許可したGmailとGoogle Calendarのデータを、受信箱整理、不要メール処理、予定登録、重複予定整理のために利用します。条件に一致するメール操作は個別承認なしで実行し、ごみ箱に最低24時間継続して存在したメールは次回処理時に復元不能な完全削除を行います。OAuth Desktop client secretとOAuthトークンはmacOS Keychain、設定・ごみ箱確認時刻・カレンダー承認待ち・監査記録は利用者のMac内に保存し、開発者運営サーバーには保存しません。client secretはローカルで登録し、アプリbundleには含めません。LLM機能を実行した場合に限り、必要最小限のメール項目をMac内の一時キュー経由で、利用者のClaudeサブスクリプションを使用する公式Claude Code CLIへ送信します。</p>
     </section>
   </main>
 
